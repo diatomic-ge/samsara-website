@@ -2,7 +2,8 @@ name: check-build
 run-name: Ensure that ${{ github.sha }} (${{ github.ref }}) builds
 on:
   pull_request:
-    push:
+  push:
+  workflow_dispatch:
 jobs:
   check-build:
     runs-on: ubuntu-latest
